@@ -5,7 +5,7 @@ int main(){
     char codigo1[5], codigo2[5];
     char nome1[50], nome2[50];
     int populacao1, populacao2, pontos1, pontos2;
-    float area1, area2, pib1, pib2, densidade1, densidade2, percapita1, percapita2;
+    float area1, area2, pib1, pib2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2;
 
      
         printf("### Bem Vindo ao Jogo Super Trunfo Novato ###\n");
@@ -61,6 +61,8 @@ int main(){
         densidade2 = (float)(populacao2 / area2);
         percapita1 = (float)(pib1 / populacao1);
         percapita2 = (float)(pib2 / populacao2);
+        superpoder1 = (float)(populacao1+area1+pib1+pontos1+densidade1+percapita1);
+        superpoder2 = (float)(populacao2+area2+pib2+pontos2+densidade2+percapita2);
 
         puts("\n");
         printf("Carta 1\n");
@@ -73,6 +75,7 @@ int main(){
         printf("PIB: %.2f de Reais\n", pib1);
         printf("PIB per capita: %.2f\n", percapita1);
         printf("Numero de pontos Turisticos: %d\n", pontos1);
+        printf("SUPER PODER! = %f", superpoder1);
 
         puts("\n");
         printf("Carta 2\n");
@@ -85,6 +88,7 @@ int main(){
         printf("PIB: %.2f Bilhoes de Reais\n", pib2);
         printf("PIB per capita: %.2f\n", percapita2);
         printf("Numero de pontos Turisticos: %d\n", pontos2);
+        printf("SUPER PODER! = %f", superpoder2);
         
         puts("\n");
         printf("RESULTADO COMPARACAO\n");
@@ -124,6 +128,13 @@ int main(){
         }else{
             printf("Carta 2 Venceu nos Pontos Turristicos!\n");
         };
+        if (superpoder1>superpoder2)
+        {
+            printf("SUPER PODER DA CARTA 1 GANHOU!\n");
+        }else{
+            printf("SUPER PODER DA CARTA 2 GANHOU!\n");
+        };
+        
 
 return 0;
 }
